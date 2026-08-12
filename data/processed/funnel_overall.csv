@@ -1,0 +1,7 @@
+stage_order,stage,users,conversion_from_signup,conversion_from_previous_stage,dropoff_users,p50_hours,p90_hours
+1,signup,12000,1.0,,0,,
+2,verification,9070,0.755833,0.755833,2930,1.53,5.15
+3,payment_method,6704,0.558667,0.73914,2366,3.78,12.58
+4,search,6167,0.513917,0.919899,537,7.02,23.19
+5,booking,3927,0.32725,0.636776,2240,11.85,39.27
+6,first_ride,3068,0.255667,0.781258,859,19.38,64.67

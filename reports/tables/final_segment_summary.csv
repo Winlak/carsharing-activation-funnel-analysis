@@ -1,0 +1,11 @@
+dimension,segment,users,conversion_from_signup
+acquisition_channel,paid_search,613,0.16581
+acquisition_channel,partner,422,0.236282
+acquisition_channel,organic,1149,0.269718
+acquisition_channel,referral,884,0.39167
+city,Saint Petersburg,691,0.19925
+city,Kazan,447,0.26863
+city,Moscow,1930,0.281013
+platform,web,228,0.124522
+platform,android,1560,0.264766
+platform,ios,1280,0.299275

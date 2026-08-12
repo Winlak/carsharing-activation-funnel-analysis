@@ -1,0 +1,37 @@
+acquisition_channel,platform,city,registrations
+organic,android,Kazan,284
+organic,android,Moscow,1206
+organic,android,Saint Petersburg,616
+organic,ios,Kazan,207
+organic,ios,Moscow,876
+organic,ios,Saint Petersburg,409
+organic,web,Kazan,71
+organic,web,Moscow,395
+organic,web,Saint Petersburg,196
+paid_search,android,Kazan,273
+paid_search,android,Moscow,1038
+paid_search,android,Saint Petersburg,538
+paid_search,ios,Kazan,194
+paid_search,ios,Moscow,714
+paid_search,ios,Saint Petersburg,402
+paid_search,web,Kazan,73
+paid_search,web,Moscow,318
+paid_search,web,Saint Petersburg,147
+partner,android,Kazan,120
+partner,android,Moscow,496
+partner,android,Saint Petersburg,233
+partner,ios,Kazan,89
+partner,ios,Moscow,380
+partner,ios,Saint Petersburg,187
+partner,web,Kazan,36
+partner,web,Moscow,160
+partner,web,Saint Petersburg,85
+referral,android,Kazan,155
+referral,android,Moscow,634
+referral,android,Saint Petersburg,299
+referral,ios,Kazan,119
+referral,ios,Moscow,432
+referral,ios,Saint Petersburg,268
+referral,web,Kazan,43
+referral,web,Moscow,219
+referral,web,Saint Petersburg,88

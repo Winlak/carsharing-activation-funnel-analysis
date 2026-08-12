@@ -1,0 +1,121 @@
+event_id,user_id,event_name,event_ts,session_id,acquisition_channel,platform,city
+c12ea7de57c570d8347fd0db,u_00001,signup,2025-01-01T00:12:10Z,s_u_00001_signup,paid_search,ios,Moscow
+d182c4bb3b3095df1849460f,u_00002,signup,2025-01-01T00:26:13Z,s_u_00002_signup,partner,android,Saint Petersburg
+43e24e05b520d8baf22b0264,u_00003,signup,2025-01-01T00:51:02Z,s_u_00003_signup,referral,android,Moscow
+fc2989f5736bc9cd43efa41a,u_00004,signup,2025-01-01T00:56:17Z,s_u_00004_signup,partner,ios,Moscow
+f83a4e858d9eb965aeb5b05c,u_00005,signup,2025-01-01T01:01:55Z,s_u_00005_signup,partner,ios,Moscow
+3d539b20edac35f8b3c7d914,u_00001,verification,2025-01-01T01:04:55.451893Z,s_u_00001_verification,paid_search,ios,Moscow
+9481d4e7a5cfd363e77654c0,u_00005,verification,2025-01-01T01:23:16.180596Z,s_u_00005_verification,partner,ios,Moscow
+9463ce1e8f920bab9e1b47dc,u_00006,signup,2025-01-01T01:25:28Z,s_u_00006_signup,partner,android,Moscow
+3766e7cf8104d076d6457ec7,u_00007,signup,2025-01-01T02:21:36Z,s_u_00007_signup,referral,android,Moscow
+1f001a3334fa0a54085a2320,u_00008,signup,2025-01-01T02:34:25Z,s_u_00008_signup,organic,android,Moscow
+e6068308f15f6886b712c0dd,u_00009,signup,2025-01-01T02:45:24Z,s_u_00009_signup,organic,android,Moscow
+9442f16cc82de35cba55f877,u_00010,signup,2025-01-01T02:48:28Z,s_u_00010_signup,partner,android,Kazan
+078bb5b15fe58e02205e2e1b,u_00011,signup,2025-01-01T03:00:54Z,s_u_00011_signup,referral,ios,Moscow
+5bd74d309b004b44f9c90ed8,u_00012,signup,2025-01-01T03:16:32Z,s_u_00012_signup,organic,android,Moscow
+dbc4ad6e7f8c11d3d3fd56dd,u_00004,verification,2025-01-01T03:26:19.499902Z,s_u_00004_verification,partner,ios,Moscow
+60df2d04fed9a3fa44270238,u_00008,verification,2025-01-01T03:31:40.970406Z,s_u_00008_verification,organic,android,Moscow
+dfc322cf6899078e0e2cdafa,u_00013,signup,2025-01-01T04:05:55Z,s_u_00013_signup,paid_search,android,Moscow
+37524fa33e687af8a4501a23,u_00014,signup,2025-01-01T04:11:43Z,s_u_00014_signup,referral,web,Kazan
+ef7d0e081e6e3c7a4e642e8c,u_00015,signup,2025-01-01T04:13:27Z,s_u_00015_signup,organic,android,Moscow
+b85e5bbeba31a3ef1d6e0362,u_00016,signup,2025-01-01T04:13:32Z,s_u_00016_signup,organic,ios,Moscow
+cc5a83e6080c865485c4ebd7,u_00003,verification,2025-01-01T04:13:59.255124Z,s_u_00003_verification,referral,android,Moscow
+39679bde5699a954d203bee0,u_00017,signup,2025-01-01T04:16:27Z,s_u_00017_signup,paid_search,android,Moscow
+d12d0262a761bb16b243e191,u_00018,signup,2025-01-01T04:21:49Z,s_u_00018_signup,organic,android,Moscow
+156671a51e7d0e48534b7252,u_00019,signup,2025-01-01T04:26:51Z,s_u_00019_signup,paid_search,ios,Saint Petersburg
+2d7ee5875ef067c43d74c87b,u_00020,signup,2025-01-01T04:29:14Z,s_u_00020_signup,organic,ios,Moscow
+12236a9379c8f2720c86907b,u_00010,verification,2025-01-01T04:44:36.167668Z,s_u_00010_verification,partner,android,Kazan
+f4c3a4a0bf4816c983436705,u_00020,verification,2025-01-01T05:01:46.826444Z,s_u_00020_verification,organic,ios,Moscow
+e054aa9173b9c293b66e6e61,u_00019,verification,2025-01-01T05:03:25.364593Z,s_u_00019_verification,paid_search,ios,Saint Petersburg
+857252ae813141dac27a1e40,u_00019,payment_method,2025-01-01T05:15:25.364593Z,s_u_00019_payment_method,paid_search,ios,Saint Petersburg
+100bf3b4fc45a94e98280683,u_00008,payment_method,2025-01-01T05:28:41.959873Z,s_u_00008_payment_method,organic,android,Moscow
+abbc96e54e95a8f67f16c770,u_00021,signup,2025-01-01T05:32:03Z,s_u_00021_signup,paid_search,android,Moscow
+25c86a00f4379d0e7ea78605,u_00014,verification,2025-01-01T05:34:01.866769Z,s_u_00014_verification,referral,web,Kazan
+b6e5299287c73056b49eaf73,u_00011,verification,2025-01-01T05:34:52.918633Z,s_u_00011_verification,referral,ios,Moscow
+a9e88399d006e693e50671ea,u_00022,signup,2025-01-01T05:40:20Z,s_u_00022_signup,partner,web,Saint Petersburg
+216109a00a050231f6b83e34,u_00023,signup,2025-01-01T05:51:10Z,s_u_00023_signup,paid_search,android,Moscow
+f6a3f5daadbf10a8ee856368,u_00024,signup,2025-01-01T05:51:53Z,s_u_00024_signup,organic,ios,Moscow
+9b127f2ae0cce10d83810d15,u_00013,verification,2025-01-01T06:01:07.185853Z,s_u_00013_verification,paid_search,android,Moscow
+5241339d6f2b91e401ad0169,u_00025,signup,2025-01-01T06:13:35Z,s_u_00025_signup,organic,android,Moscow
+2a009ef179db70cb9e1435ec,u_00026,signup,2025-01-01T06:21:43Z,s_u_00026_signup,organic,android,Moscow
+884708b34cb2dd0c0b106b88,u_00018,verification,2025-01-01T06:37:23.452797Z,s_u_00018_verification,organic,android,Moscow
+439e3ad9c7dc2826211622f6,u_00027,signup,2025-01-01T06:42:28Z,s_u_00027_signup,organic,ios,Moscow
+d324e61cad1cd713427f1034,u_00025,verification,2025-01-01T06:43:19.606349Z,s_u_00025_verification,organic,android,Moscow
+4677ee1cf1659784aa71478c,u_00011,payment_method,2025-01-01T06:46:39.709349Z,s_u_00011_payment_method,referral,ios,Moscow
+958770ed61d0fb694a2dcbfe,u_00021,verification,2025-01-01T06:53:10.019792Z,s_u_00021_verification,paid_search,android,Moscow
+ba4bba7a65e1bfec83a473a8,u_00027,verification,2025-01-01T06:59:31.727715Z,s_u_00027_verification,organic,ios,Moscow
+f02532a6a373a6dffbf7b7a4,u_00022,verification,2025-01-01T07:11:24.352734Z,s_u_00022_verification,partner,web,Saint Petersburg
+4c3f90791b440b4dbafc39ae,u_00028,signup,2025-01-01T07:19:39Z,s_u_00028_signup,partner,ios,Moscow
+96dc1361e35e923d6c01b215,u_00029,signup,2025-01-01T07:24:45Z,s_u_00029_signup,organic,ios,Moscow
+efb83cf6fe4d7424df9d7b3a,u_00029,verification,2025-01-01T07:33:45Z,s_u_00029_verification,organic,ios,Moscow
+a512187a4748d036e17d1911,u_00020,payment_method,2025-01-01T07:34:34.438018Z,s_u_00020_payment_method,organic,ios,Moscow
+e89e6ea49db0e8075478f5e5,u_00030,signup,2025-01-01T07:48:13Z,s_u_00030_signup,paid_search,android,Kazan
+1ad960fa6796ae7d5b21bf4d,u_00012,verification,2025-01-01T07:52:01.579707Z,s_u_00012_verification,organic,android,Moscow
+7e26ae25e3becc2e0964a529,u_00024,verification,2025-01-01T07:54:13.850920Z,s_u_00024_verification,organic,ios,Moscow
+929d9278f89e039a6e8eaab5,u_00023,verification,2025-01-01T08:00:10.506904Z,s_u_00023_verification,paid_search,android,Moscow
+ee7fbb25cd89e813c7dcd0a4,u_00031,signup,2025-01-01T08:00:39Z,s_u_00031_signup,referral,android,Moscow
+be60ac64657108a529bc72f0,u_00032,signup,2025-01-01T08:12:49Z,s_u_00032_signup,referral,ios,Saint Petersburg
+daca4db3a1394060800b9eac,u_00033,signup,2025-01-01T08:19:19Z,s_u_00033_signup,referral,android,Saint Petersburg
+468c9fba2d124145f50c9366,u_00032,verification,2025-01-01T08:26:34.876462Z,s_u_00032_verification,referral,ios,Saint Petersburg
+4abb5104aaaa0b75f3b23ec8,u_00034,signup,2025-01-01T08:30:30Z,s_u_00034_signup,referral,web,Moscow
+6ba7a0871f3761b8754c0c27,u_00035,signup,2025-01-01T08:31:41Z,s_u_00035_signup,organic,ios,Saint Petersburg
+140ee6e24902c32ef6254fb8,u_00031,verification,2025-01-01T08:40:09.124588Z,s_u_00031_verification,referral,android,Moscow
+38300ff459a85a00788653d1,u_00010,payment_method,2025-01-01T08:50:08.447350Z,s_u_00010_payment_method,partner,android,Kazan
+06dcf8a6de802de2ff508c93,u_00009,verification,2025-01-01T09:00:09.019288Z,s_u_00009_verification,organic,android,Moscow
+e6f5964a122b696763b66140,u_00036,signup,2025-01-01T09:13:40Z,s_u_00036_signup,partner,android,Saint Petersburg
+17c95278e2afc32be4f3ad51,u_00037,signup,2025-01-01T09:18:37Z,s_u_00037_signup,organic,android,Moscow
+fab939b20d50a7c487f4bde1,u_00025,payment_method,2025-01-01T09:20:25.002249Z,s_u_00025_payment_method,organic,android,Moscow
+3b8a1f09d99caa89361b2098,u_00036,verification,2025-01-01T09:22:40Z,s_u_00036_verification,partner,android,Saint Petersburg
+c66f9fb3669d99c337cda774,u_00038,signup,2025-01-01T09:30:46Z,s_u_00038_signup,partner,android,Kazan
+2e01f34f4c3c4c8126c3cea9,u_00031,payment_method,2025-01-01T09:33:19.833329Z,s_u_00031_payment_method,referral,android,Moscow
+eceb5cd2517d3cbbd1e569dc,u_00036,payment_method,2025-01-01T09:38:43.046032Z,s_u_00036_payment_method,partner,android,Saint Petersburg
+fae952aaab5293bbedd678a4,u_00039,signup,2025-01-01T09:43:31Z,s_u_00039_signup,paid_search,android,Moscow
+7ab32ff84a886efbd53a8320,u_00040,signup,2025-01-01T09:59:37Z,s_u_00040_signup,partner,web,Moscow
+386ea3f30dd1cbfc69881d93,u_00035,verification,2025-01-01T10:17:39.169727Z,s_u_00035_verification,organic,ios,Saint Petersburg
+e5f3cb4e3d2fa10464414e64,u_00010,search,2025-01-01T10:22:50.246271Z,s_u_00010_search,partner,android,Kazan
+c35e860bf83e6094dfdf28be,u_00041,signup,2025-01-01T10:22:50Z,s_u_00041_signup,organic,android,Moscow
+52353266a47b790c60a0a848,u_00020,search,2025-01-01T10:31:15.136200Z,s_u_00020_search,organic,ios,Moscow
+d99ebf4517cde46b26879247,u_00012,payment_method,2025-01-01T10:32:21.728416Z,s_u_00012_payment_method,organic,android,Moscow
+8354a91112bcea55eb9b7ec7,u_00042,signup,2025-01-01T10:58:09Z,s_u_00042_signup,paid_search,web,Kazan
+0db25adf84e84183be3b120a,u_00038,verification,2025-01-01T10:58:53.057976Z,s_u_00038_verification,partner,android,Kazan
+4ba93be1249624f6c57e7fc9,u_00008,search,2025-01-01T11:04:35.909082Z,s_u_00008_search,organic,android,Moscow
+aac9e5c312b9b0091f4404b7,u_00043,signup,2025-01-01T11:13:48Z,s_u_00043_signup,organic,ios,Moscow
+dc5fb6788a1234c733020c0d,u_00044,signup,2025-01-01T11:27:48Z,s_u_00044_signup,paid_search,android,Moscow
+2cfff232e076294ad03acd9b,u_00045,signup,2025-01-01T11:34:39Z,s_u_00045_signup,referral,ios,Saint Petersburg
+5eaafa60ec9f7b22e1db7a18,u_00012,search,2025-01-01T11:38:20.912070Z,s_u_00012_search,organic,android,Moscow
+19f7be128ddca6c51663ff34,u_00046,signup,2025-01-01T11:40:48Z,s_u_00046_signup,organic,android,Moscow
+dffc1114126dc8c9b8bdec33,u_00043,verification,2025-01-01T11:42:27.869964Z,s_u_00043_verification,organic,ios,Moscow
+fc576162f1cb81297246bf61,u_00035,payment_method,2025-01-01T11:50:37.290609Z,s_u_00035_payment_method,organic,ios,Saint Petersburg
+e454a2716d6c856580082af4,u_00019,search,2025-01-01T11:51:33.865364Z,s_u_00019_search,paid_search,ios,Saint Petersburg
+99d8903ad80be73b6953d401,u_00036,search,2025-01-01T11:55:41.653848Z,s_u_00036_search,partner,android,Saint Petersburg
+0855a0e6450dd785efc709b4,u_00047,signup,2025-01-01T11:58:06Z,s_u_00047_signup,paid_search,ios,Saint Petersburg
+6a5e57198ef96245dc4b9984,u_00044,verification,2025-01-01T12:04:06.189141Z,s_u_00044_verification,paid_search,android,Moscow
+4559ba75e19126d11471f55f,u_00048,signup,2025-01-01T12:12:17Z,s_u_00048_signup,organic,ios,Moscow
+0042332ccbff168ec03cca99,u_00032,payment_method,2025-01-01T12:32:30.422911Z,s_u_00032_payment_method,referral,ios,Saint Petersburg
+6b3f77f86cc45ad50ce5f6f2,u_00049,signup,2025-01-01T12:33:26Z,s_u_00049_signup,paid_search,android,Moscow
+fcdaa1ce27b860f6d01c2bd8,u_00031,search,2025-01-01T12:35:12.570855Z,s_u_00031_search,referral,android,Moscow
+d9b0ada98a8d3806c6f6be52,u_00004,payment_method,2025-01-01T12:38:15.642000Z,s_u_00004_payment_method,partner,ios,Moscow
+289fa3d2cc629a5ba11d6f80,u_00050,signup,2025-01-01T12:39:48Z,s_u_00050_signup,paid_search,ios,Moscow
+efff12cf7aa8595475b53f95,u_00026,verification,2025-01-01T12:45:20.976025Z,s_u_00026_verification,organic,android,Moscow
+a08ffc4738459dd6145984fa,u_00042,verification,2025-01-01T12:51:42.214367Z,s_u_00042_verification,paid_search,web,Kazan
+13cc9a01d21369744b3e7578,u_00007,verification,2025-01-01T12:53:51.209589Z,s_u_00007_verification,referral,android,Moscow
+792cabc361a4949042bdbd18,u_00051,signup,2025-01-01T12:54:22Z,s_u_00051_signup,partner,android,Moscow
+a50ca1797a3846d8d59b57ce,u_00026,payment_method,2025-01-01T12:57:20.976025Z,s_u_00026_payment_method,organic,android,Moscow
+7acb5b5edb059c2c588c2b2a,u_00044,payment_method,2025-01-01T13:11:58.819922Z,s_u_00044_payment_method,paid_search,android,Moscow
+df28cf8eaba5ff43927f315c,u_00052,signup,2025-01-01T13:26:02Z,s_u_00052_signup,organic,android,Moscow
+68e3c5e13d2f0dac20c39fbb,u_00011,search,2025-01-01T13:26:27.001420Z,s_u_00011_search,referral,ios,Moscow
+0f55ec7bd859a4c4835155c6,u_00026,search,2025-01-01T13:35:02.180404Z,s_u_00026_search,organic,android,Moscow
+13c68c30e2b86ee00420c095,u_00053,signup,2025-01-01T13:42:46Z,s_u_00053_signup,paid_search,web,Moscow
+c4e0396fef8b3f6b6b4e7188,u_00054,signup,2025-01-01T13:52:33Z,s_u_00054_signup,referral,android,Moscow
+ab0536d7833750579f3c075c,u_00053,verification,2025-01-01T14:20:39.293725Z,s_u_00053_verification,paid_search,web,Moscow
+5571201c78e528e6ae738d6b,u_00009,payment_method,2025-01-01T14:23:03.625237Z,s_u_00009_payment_method,organic,android,Moscow
+1be9cc34e1c8dd417a4a0bf2,u_00052,verification,2025-01-01T14:24:57.675579Z,s_u_00052_verification,organic,android,Moscow
+ae77d65c5a7d691323ea3b83,u_00049,verification,2025-01-01T14:44:19.705984Z,s_u_00049_verification,paid_search,android,Moscow
+5ba1a5dd324967f7455fbd00,u_00033,verification,2025-01-01T14:47:17.629836Z,s_u_00033_verification,referral,android,Saint Petersburg
+ebbed80580b7338489276b26,u_00036,booking,2025-01-01T15:00:04.655150Z,s_u_00036_booking,partner,android,Saint Petersburg
+28566ac782617152867a298d,u_00055,signup,2025-01-01T15:00:44Z,s_u_00055_signup,referral,android,Moscow
+b8ff50d73519ebc519d0f8eb,u_00019,booking,2025-01-01T15:01:41.572083Z,s_u_00019_booking,paid_search,ios,Saint Petersburg
+5c3032c518c1338287a8c03c,u_00056,signup,2025-01-01T15:06:04Z,s_u_00056_signup,organic,ios,Saint Petersburg
+dbe861f6efb0c531ab674e38,u_00050,verification,2025-01-01T15:07:42.960513Z,s_u_00050_verification,paid_search,ios,Moscow
+af9ee378fdaaaf89a6e084c7,u_00052,payment_method,2025-01-01T15:09:10.426256Z,s_u_00052_payment_method,organic,android,Moscow
+10cd7722f2d4c0c115d1ae78,u_00056,verification,2025-01-01T15:18:05.803735Z,s_u_00056_verification,organic,ios,Saint Petersburg

@@ -1,0 +1,6 @@
+stage_order,transition,users_reaching_both_steps,p50_hours,p90_hours
+2,signup → verification,9070,1.53,5.15
+3,verification → payment_method,6704,3.78,12.58
+4,payment_method → search,6167,7.02,23.19
+5,search → booking,3927,11.85,39.27
+6,booking → first_ride,3068,19.38,64.67

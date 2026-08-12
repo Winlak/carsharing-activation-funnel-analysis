@@ -1,0 +1,61 @@
+dimension,segment,stage_order,stage,users,conversion_from_signup,conversion_from_previous_stage
+acquisition_channel,organic,1,signup,4260,1.0,
+acquisition_channel,organic,2,verification,3256,0.764319,0.764319
+acquisition_channel,organic,3,payment_method,2443,0.573474,0.750307
+acquisition_channel,organic,4,search,2274,0.533803,0.930823
+acquisition_channel,organic,5,booking,1461,0.342958,0.64248
+acquisition_channel,organic,6,first_ride,1149,0.269718,0.786448
+acquisition_channel,paid_search,1,signup,3697,1.0,
+acquisition_channel,paid_search,2,verification,2604,0.704355,0.704355
+acquisition_channel,paid_search,3,payment_method,1797,0.48607,0.690092
+acquisition_channel,paid_search,4,search,1556,0.420882,0.865888
+acquisition_channel,paid_search,5,booking,890,0.240736,0.571979
+acquisition_channel,paid_search,6,first_ride,613,0.16581,0.688764
+acquisition_channel,partner,1,signup,1786,1.0,
+acquisition_channel,partner,2,verification,1319,0.738522,0.738522
+acquisition_channel,partner,3,payment_method,920,0.515118,0.697498
+acquisition_channel,partner,4,search,847,0.474244,0.920652
+acquisition_channel,partner,5,booking,534,0.298992,0.63046
+acquisition_channel,partner,6,first_ride,422,0.236282,0.790262
+acquisition_channel,referral,1,signup,2257,1.0,
+acquisition_channel,referral,2,verification,1891,0.837838,0.837838
+acquisition_channel,referral,3,payment_method,1544,0.684094,0.816499
+acquisition_channel,referral,4,search,1490,0.660168,0.965026
+acquisition_channel,referral,5,booking,1042,0.461675,0.699329
+acquisition_channel,referral,6,first_ride,884,0.39167,0.848369
+platform,android,1,signup,5892,1.0,
+platform,android,2,verification,4484,0.761032,0.761032
+platform,android,3,payment_method,3339,0.566701,0.744648
+platform,android,4,search,3085,0.523591,0.923929
+platform,android,5,booking,1992,0.338086,0.645705
+platform,android,6,first_ride,1560,0.264766,0.783133
+platform,ios,1,signup,4277,1.0,
+platform,ios,2,verification,3317,0.775544,0.775544
+platform,ios,3,payment_method,2601,0.608137,0.784142
+platform,ios,4,search,2428,0.567688,0.933487
+platform,ios,5,booking,1605,0.375263,0.661038
+platform,ios,6,first_ride,1280,0.299275,0.797508
+platform,web,1,signup,1831,1.0,
+platform,web,2,verification,1269,0.693064,0.693064
+platform,web,3,payment_method,764,0.417258,0.602049
+platform,web,4,search,654,0.357182,0.856021
+platform,web,5,booking,330,0.180229,0.504587
+platform,web,6,first_ride,228,0.124522,0.690909
+city,Kazan,1,signup,1664,1.0,
+city,Kazan,2,verification,1265,0.760216,0.760216
+city,Kazan,3,payment_method,935,0.561899,0.73913
+city,Kazan,4,search,863,0.51863,0.922995
+city,Kazan,5,booking,571,0.343149,0.661645
+city,Kazan,6,first_ride,447,0.26863,0.782837
+city,Moscow,1,signup,6868,1.0,
+city,Moscow,2,verification,5312,0.773442,0.773442
+city,Moscow,3,payment_method,4030,0.586779,0.75866
+city,Moscow,4,search,3728,0.542807,0.925062
+city,Moscow,5,booking,2461,0.358328,0.660139
+city,Moscow,6,first_ride,1930,0.281013,0.784234
+city,Saint Petersburg,1,signup,3468,1.0,
+city,Saint Petersburg,2,verification,2493,0.718858,0.718858
+city,Saint Petersburg,3,payment_method,1739,0.501442,0.697553
+city,Saint Petersburg,4,search,1576,0.454441,0.906268
+city,Saint Petersburg,5,booking,895,0.258074,0.567893
+city,Saint Petersburg,6,first_ride,691,0.19925,0.772067
