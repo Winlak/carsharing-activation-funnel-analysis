@@ -67,6 +67,8 @@ def _format_rate(value: float) -> str:
 
 def _markdown_table(frame: pd.DataFrame, columns: list[str]) -> str:
     view = frame.loc[:, columns].copy()
+    for column in columns:
+        view[column] = view[column].map(lambda value: value.replace("\n", " ") if isinstance(value, str) else value)
     return view.to_markdown(index=False)
 
 
@@ -143,12 +145,23 @@ def _save_figures(
     ax.set_yticks(range(3), ["Activation D1", "Activation D7", "Activation D30"])
     for row in range(cohort_matrix.shape[0]):
         for column in range(cohort_matrix.shape[1]):
-            ax.text(column, row, f"{cohort_matrix.iloc[row, column]:.1f}%", ha="center", va="center", color=COLORS["ink"])
-    ax.set_title("Активация когорт регистрации")
+            value = float(cohort_matrix.iloc[row, column])
+            label_color = "white" if image.norm(value) > 0.55 else COLORS["ink"]
+            ax.text(column, row, f"{value:.1f}%", ha="center", va="center", color=label_color)
+    ax.set_title("Активация когорт регистрации", pad=28)
+    ax.text(0.5, 1.03, f"Синтетические регистрации, UTC; n = {int(cohorts['registrations'].sum()):,}",
+            transform=ax.transAxes, ha="center", fontsize=9, color=COLORS["ink"])
     fig.colorbar(image, ax=ax, label="Доля регистраций, %")
     fig.tight_layout()
     fig.savefig(FIGURES_DIR / "cohort_activation.png", dpi=180, bbox_inches="tight")
     plt.close(fig)
+
+
+def loss_extremes(funnel: pd.DataFrame) -> tuple[pd.Series, pd.Series]:
+    transitions = funnel.loc[funnel["stage_order"] > 1]
+    absolute = transitions.loc[transitions["dropoff_users"].idxmax()]
+    relative = transitions.loc[transitions["conversion_from_previous_stage"].idxmin()]
+    return absolute, relative
 
 
 def _build_report(
@@ -160,7 +173,7 @@ def _build_report(
 ) -> None:
     signup_users = int(funnel.loc[funnel["stage"] == "signup", "users"].iloc[0])
     first_ride = funnel.loc[funnel["stage"] == "first_ride"].iloc[0]
-    largest_loss = funnel.loc[funnel["stage_order"] > 1].sort_values("conversion_from_previous_stage").iloc[0]
+    largest_absolute_loss, weakest_conversion = loss_extremes(funnel)
     payment_loss = funnel.loc[funnel["stage"] == "payment_method"].iloc[0]
     ride_loss = funnel.loc[funnel["stage"] == "first_ride"].iloc[0]
 
@@ -176,7 +189,8 @@ def _build_report(
     final_segments["overall_conversion_pct"] = final_segments["conversion_from_signup"] * 100
     best_segment = final_segments.sort_values("conversion_from_signup", ascending=False).iloc[0]
     worst_segment = final_segments.sort_values("conversion_from_signup").iloc[0]
-    largest_loss_label = STAGE_LABELS[str(largest_loss["stage"])]
+    absolute_loss_label = STAGE_LABELS[str(largest_absolute_loss["stage"])]
+    weakest_conversion_label = STAGE_LABELS[str(weakest_conversion["stage"])]
     best_segment_label = _segment_display(best_segment)
     worst_segment_label = _segment_display(worst_segment)
     weakest_booking_city_label = SEGMENT_LABELS[str(weakest_booking_city["segment"])]
@@ -203,7 +217,8 @@ def _build_report(
 ## Executive Summary
 
 - **Из {signup_users:,} регистраций первую поездку совершили {int(first_ride['users']):,} пользователей ({_format_rate(float(first_ride['conversion_from_signup']))}).** Это описательная оценка на детерминированных синтетических событиях за регистрации с 1 января по 30 апреля 2025 года, а не данные реального оператора.
-- **Самая большая наблюдаемая потеря — {largest_loss_label}:** после предыдущего шага до него дошли {_format_rate(float(largest_loss['conversion_from_previous_stage']))} пользователей; выбыло {int(largest_loss['dropoff_users']):,}.
+- **Максимальная потеря в людях — {absolute_loss_label}:** выбыло {int(largest_absolute_loss['dropoff_users']):,} пользователей; конверсия предыдущего шага — {_format_rate(float(largest_absolute_loss['conversion_from_previous_stage']))}.
+- **Минимальная конверсия соседнего шага — {weakest_conversion_label}:** {_format_rate(float(weakest_conversion['conversion_from_previous_stage']))}; выбыло {int(weakest_conversion['dropoff_users']):,} пользователей. Абсолютная потеря и доля оттока отвечают на разные вопросы.
 - **Сегментный разрыв заметен:** лучший итоговый сегмент — {best_segment_label} ({_format_rate(float(best_segment['conversion_from_signup']))}), слабейший — {worst_segment_label} ({_format_rate(float(worst_segment['conversion_from_signup']))}). Это факт симуляции, не причинный вывод.
 
 ## Как считаются метрики
@@ -212,9 +227,9 @@ def _build_report(
 
 Конверсия шага — пользователи на шаге / пользователи на предшествующем шаге. Итоговая конверсия — пользователи с `first_ride` / все `signup`. Окно конверсии составляет 30 дней с регистрации: все регистрации взяты достаточно рано, чтобы окно завершилось до даты среза 30 июня 2025. Подробнее — в [методике](../docs/methodology.md).
 
-## Потеря на поиске и бронировании — главный наблюдаемый разрыв
+## Абсолютная потеря и конверсия шага — разные критерии
 
-**Из поиска в бронирование переходит только {_format_rate(float(largest_loss['conversion_from_previous_stage']))}; это {int(largest_loss['dropoff_users']):,} пользователей потери.** На графике показана кумулятивная конверсия; таблица сохраняет оба знаменателя. Это крупнейший drop-off в этой симуляции и самый большой потенциальный рычаг для исследования.
+**На этапе «{absolute_loss_label}» теряется больше всего людей — {int(largest_absolute_loss['dropoff_users']):,}.** При этом худшая конверсия перехода — «{weakest_conversion_label}»: {_format_rate(float(weakest_conversion['conversion_from_previous_stage']))}. На графике показана кумулятивная конверсия; таблица сохраняет оба знаменателя. Приоритет эксперимента зависит также от причин оттока, ожидаемого прироста итоговой конверсии и стоимости изменений — одним числом drop-off его не определить.
 
 ![Общая воронка](figures/funnel_overall.png)
 
@@ -316,6 +331,7 @@ def run_analysis(root: Path = ROOT) -> dict[str, pd.DataFrame]:
     os.chdir(root)
     try:
         connection = duckdb.connect()
+        connection.execute("SET TimeZone = 'UTC'")
         quality = _run_query(connection, "01_data_quality.sql")
         funnel = _run_query(connection, "02_funnel_overall.sql")
         segment_funnel = pd.concat(
