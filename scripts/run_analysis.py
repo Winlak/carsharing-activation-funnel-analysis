@@ -214,7 +214,7 @@ def _build_report(
 
     report = f"""# Воронка первой поездки в каршеринге
 
-## Executive Summary
+## Краткие результаты
 
 - **Из {signup_users:,} регистраций первую поездку совершили {int(first_ride['users']):,} пользователей ({_format_rate(float(first_ride['conversion_from_signup']))}).** Это описательная оценка на детерминированных синтетических событиях за регистрации с 1 января по 30 апреля 2025 года, а не данные реального оператора.
 - **Максимальная потеря в людях — {absolute_loss_label}:** выбыло {int(largest_absolute_loss['dropoff_users']):,} пользователей; конверсия предыдущего шага — {_format_rate(float(largest_absolute_loss['conversion_from_previous_stage']))}.
@@ -269,7 +269,7 @@ def _build_report(
 
 **Проверки пройдены: {quality_label}.** SQL проверяет дубли `event_id`, обязательные поля, допустимые имена событий, дату среза и порядок шагов; отдельные pytest-проверки подтверждают монотонность воронки и порядок событий. Результаты описательны: синтетический генератор намеренно задаёт различия между сегментами. В логе нет причин событий, цен, наличия машин, отказов платёжного провайдера, отмен или реального эксперимента — поэтому рекомендации являются планом проверки, а не доказанными причинами.
 
-## Further questions
+## Что проверить дальше
 
 - Как меняется search → booking при одинаковой доступности машин, цене и ETA?
 - Какие конкретные ошибки или возвраты из 3DS происходят в web-потоке оплаты?
@@ -347,7 +347,11 @@ def run_analysis(root: Path = ROOT) -> dict[str, pd.DataFrame]:
     # pandas data path: loading, filtering, groupby and merge are intentionally explicit.
     events = pd.read_csv(raw_events)
     events["event_ts"] = pd.to_datetime(events["event_ts"], format="ISO8601", utc=True)
-    signup_events = events.loc[events["event_name"].eq("signup")]
+    signup_events = events.loc[events["event_name"].eq("signup")].sort_values("event_ts").drop_duplicates("user_id")
+    signup_events = signup_events.loc[
+        signup_events["event_ts"].ge(pd.Timestamp("2025-01-01", tz="UTC"))
+        & signup_events["event_ts"].lt(pd.Timestamp("2025-05-01", tz="UTC"))
+    ]
     segment_sizes = signup_events.groupby(["acquisition_channel", "platform", "city"], as_index=False).agg(
         registrations=("user_id", "nunique")
     )

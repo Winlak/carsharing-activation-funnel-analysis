@@ -33,7 +33,7 @@ stage_pivot AS (
 order_violations AS (
     SELECT COUNT(*) AS issue_value
     FROM stage_pivot
-    WHERE (verification_ts IS NOT NULL AND verification_ts < signup_ts)
+    WHERE (verification_ts IS NOT NULL AND (signup_ts IS NULL OR verification_ts < signup_ts))
        OR (payment_ts IS NOT NULL AND (verification_ts IS NULL OR payment_ts < verification_ts))
        OR (search_ts IS NOT NULL AND (payment_ts IS NULL OR search_ts < payment_ts))
        OR (booking_ts IS NOT NULL AND (search_ts IS NULL OR booking_ts < search_ts))
@@ -54,6 +54,9 @@ UNION ALL
 SELECT 'future_of_analysis_window', COUNT(*)::BIGINT
 FROM raw
 WHERE event_ts > TIMESTAMP '2025-06-30 23:59:00'
+UNION ALL
+SELECT 'missing_signup', COUNT(*)::BIGINT
+FROM stage_pivot WHERE signup_ts IS NULL
 UNION ALL
 SELECT 'stage_order_violation', issue_value::BIGINT
 FROM order_violations
